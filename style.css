@@ -25,5 +25,6 @@ p:last-child {
  * Widget: Icon List
  */
 .elementor-icon-list-text {
+    -webkit-transition: color .25s;
     transition: color .25s;
 }

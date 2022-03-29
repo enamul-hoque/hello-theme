@@ -40,3 +40,11 @@ function custom_css_support() {
    new Custom_CSS_Support();
 }
 add_action('elementor/init', 'custom_css_support');
+
+
+/** Shortcode: Current Year **/
+function year_shortcode() {
+	$y = date('Y');
+	return $y;
+}
+add_shortcode( 'year', 'year_shortcode' );

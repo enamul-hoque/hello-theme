@@ -6,6 +6,16 @@
  */
 
 /**
+ * Table of Contents
+ * -----------------
+ * 
+ * Load child theme css and optional scripts
+ * Admin Helpers
+ * Shortcode: Current Year
+ * Woo: Add To Cart Text Option
+ */
+
+/**
  * Load child theme css and optional scripts
  *
  * @return void
@@ -48,3 +58,9 @@ function year_shortcode() {
 	return $y;
 }
 add_shortcode( 'year', 'year_shortcode' );
+
+
+/** Woo: Add To Cart Text Option */
+if ( class_exists( 'woocommerce' ) ):
+	include_once( 'inc/woo-options.php' );
+endif;

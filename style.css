@@ -16,6 +16,12 @@ Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, fe
 /**
  * General Sytling
  */
+a,
+button {
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
 p:last-child {
     margin-bottom: 0;
 }

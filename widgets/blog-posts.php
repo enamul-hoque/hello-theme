@@ -158,7 +158,7 @@ class BlogPosts extends Widget_Base {
         $settings = $this->get_settings();
 
         $query = new \WP_Query([
-            'posts_per_page' => 1,
+            'posts_per_page' => 12,
         ]);
         ?>
 

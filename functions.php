@@ -13,6 +13,7 @@
  * Admin Helpers
  * Shortcode: Current Year
  * Woo: Add To Cart Text Option
+ * Elementor Custom Widgets.
  */
 
 /**
@@ -21,7 +22,7 @@
  * @return void
  */
 function hello_elementor_child_enqueue_scripts() {
-	$ver = '1.0.001';
+	$ver = '1.0.003';
 
 	// Styles.
 	wp_enqueue_style( 'hello-elementor-child-style', get_stylesheet_directory_uri() . '/style.css', ['hello-elementor-theme-style'], $ver );
@@ -53,3 +54,13 @@ add_shortcode( 'year', 'year_shortcode' );
 if ( class_exists( 'woocommerce' ) ):
 	include_once( 'inc/woo-options.php' );
 endif;
+
+
+/** Elementor Custom Widgets **/
+function el_custom_widgets() {
+	require_once(get_stylesheet_directory() . '/widgets/blog-posts.php');
+
+    \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new \HelloElementorChild\BlogPosts());
+}
+add_action('elementor/widgets/widgets_registered', 'el_custom_widgets');
+

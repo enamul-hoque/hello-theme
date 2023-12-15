@@ -12,6 +12,7 @@
  * Load child theme css and optional scripts
  * Admin Helpers
  * Shortcode: Current Year
+ * Shortcode: Page Title
  * Woo: Add To Cart Text Option
  * Elementor Custom Widgets.
  */
@@ -48,6 +49,14 @@ function year_shortcode() {
 	return $y;
 }
 add_shortcode( 'year', 'year_shortcode' );
+
+
+/** Shortcode: Page Title **/
+function page_title_shortcode() {
+    $title = get_the_title();
+    return $title;
+}
+add_shortcode( 'page_title', 'page_title_shortcode' );
 
 
 /** Woo: Add To Cart Text Option */

@@ -14,6 +14,7 @@ Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, fe
 
 /** [Table of Contents]
 
+    - Nav Menu Widget
     - Basic Gallery: Equal Height
 **/
 
@@ -102,6 +103,24 @@ p:last-child {
 
 .post_grid--pagination {
     text-align: center;
+}
+
+
+/** - Nav Menu Widget **/
+@media (max-width: 1024px) {
+    .elementor-widget-navigation-menu {
+        position: static;
+    }
+    
+    .hfe-nav-menu__toggle:not(.hfe-active-menu) + .hfe-dropdown {
+        display: none;
+    }
+
+    .hfe-dropdown {
+        left: 10px !important;
+        right: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
 }
 
 

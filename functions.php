@@ -68,8 +68,10 @@ endif;
 /** Elementor Custom Widgets **/
 function el_custom_widgets() {
 	require_once(get_stylesheet_directory() . '/widgets/blog-posts.php');
+	require_once(get_stylesheet_directory() . '/widgets/contact-form.php');
 
     \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new \HelloElementorChild\BlogPosts());
+    \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new \HelloElementorChild\ContactForm());
 }
 add_action('elementor/widgets/widgets_registered', 'el_custom_widgets');
 

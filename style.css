@@ -16,6 +16,7 @@ Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, fe
 
     - Nav Menu Widget
     - Basic Gallery: Equal Height
+    - Contact Form 7 Widget.
 **/
 
 
@@ -162,4 +163,29 @@ p:last-child {
 
 .bg_equalHeight .gallery-icon > a:hover:after {
     background-color: rgba(0, 0, 0, 0.55);
+}
+
+
+/** Contact Form 7 Widget **/
+.webex-contact-form br {
+    display: none;
+}
+
+.webex-contact-form p {
+    margin: 0;
+}
+
+.webex-contact-form label {
+    display: block;
+}
+
+.webex-contact-form .wpcf7-form-control-wrap {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.webex-contact-form .wpcf7-submit {
+    color: #fff;
+    background-color: #000;
+    border-width: 0;
 }

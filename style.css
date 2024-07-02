@@ -184,8 +184,30 @@ p:last-child {
     margin-bottom: 20px;
 }
 
+.webex-contact-form .wpcf7-form-control {
+    margin-top: 5px;
+    outline: 0;
+}
+
+.webex-contact-form textarea.wpcf7-form-control {
+    height: 120px;
+}
+
+.webex-contact-form .wpcf7-not-valid-tip {
+    padding-top: 6px;
+    font-size: 14px;
+}
+
 .webex-contact-form .wpcf7-submit {
     color: #fff;
     background-color: #000;
     border-width: 0;
+}
+
+.webex-contact-form .wpcf7-spinner {
+    display: none;
+}
+
+.webex-contact-form .wpcf7-form .wpcf7-response-output {
+    margin: 25px 0 0;
 }

@@ -24,191 +24,202 @@ Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, fe
 /**
  * General Sytling
  */
-a,
-button {
-    -webkit-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-}
+ a,
+ button {
+     -webkit-transition: all 0.3s ease 0s;
+     transition: all 0.3s ease 0s;
+ }
+ 
+ p:last-child {
+     margin-bottom: 0;
+ }
+ 
+ 
+ /**
+  * Widget: Icon List
+  */
+ .elementor-icon-list-text {
+     -webkit-transition: color .25s;
+     transition: color .25s;
+ }
+ 
+ 
+ /**
+  * Blog Posts Widget.
+  */
+ .post_grid {
+     display: -ms-grid;
+     display: grid;
+     -ms-grid-columns: (1fr)[1];
+     grid-template-columns: repeat(1, 1fr);
+     gap: 20px;
+ }
+ @media screen and (min-width: 768px) {
+     .post_grid {
+         display: -ms-grid;
+         display: grid;
+         -ms-grid-columns: (1fr)[2];
+         grid-template-columns: repeat(2, 1fr);
+         gap: 20px;
+     }
+ }
+ @media screen and (min-width: 1025px) {
+     .post_grid {
+         display: -ms-grid;
+         display: grid;
+         -ms-grid-columns: (1fr)[3];
+         grid-template-columns: repeat(3, 1fr);
+         gap: 20px;
+     }
+ }
+ 
+ .post_grid--item {
+     position: relative;
+     z-index: 0;
+ }
+ 
+ .post_grid--img > img {
+     display: block;
+ }
+ 
+ .post_grid--link {
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+ }
+ 
+ .post_grid--meta {
+     margin: 0;
+     padding: 0;
+     list-style: none;
+ }
+ 
+ .post_grid--heading {
+     margin: 0;
+     -webkit-transition: color .25s;
+     transition: color .25s;
+ }
+ 
+ .post_grid--pagination {
+     text-align: center;
+ }
+ 
+ 
+ /** - Nav Menu Widget **/
+ @media (max-width: 1024px) {
+     .elementor-widget-navigation-menu {
+         position: static;
+     }
+     
+     .hfe-nav-menu__toggle:not(.hfe-active-menu) + .hfe-dropdown {
+         display: none;
+     }
+ 
+     .hfe-dropdown {
+         left: 10px !important;
+         right: 10px;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+     }
+ }
+ 
+ 
+ /** Basic Gallery: Equal Height **/
+ .bg_equalHeight .gallery-icon > a {
+     display: block;
+     position: relative;
+     z-index: 0;
+ }
+ 
+ .bg_equalHeight .gallery-icon > a:before {
+     content: "";
+     display: block;
+     padding-bottom: 100%;
+ }
+ 
+ .bg_equalHeight .gallery-icon > a > img {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     -o-object-fit: cover;
+        object-fit: cover;
+ }
+ 
+ .bg_equalHeight .gallery-icon > a:after {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background-color: transparent;
+     -webkit-transition: background .25s ease-in-out;
+     transition: background .25s ease-in-out;
+     z-index: 1;
+ }
+ 
+ .bg_equalHeight .gallery-icon > a:hover:after {
+     background-color: rgba(0, 0, 0, 0.55);
+ }
+ 
+ 
+ /** Contact Form 7 Widget **/
+ .webex-contact-form br {
+     display: none;
+ }
+ 
+ .webex-contact-form p {
+     margin: 0;
+ }
+ 
+ .webex-contact-form label {
+     display: block;
+ }
+ 
+ .webex-contact-form .wpcf7-form-control-wrap {
+     display: block;
+     margin-bottom: 20px;
+ }
+ 
+ .webex-contact-form .wpcf7-form-control {
+     margin-top: 5px;
+     outline: 0;
+ }
+ 
+ .webex-contact-form textarea.wpcf7-form-control {
+     height: 120px;
+ }
+ 
+ .webex-contact-form .wpcf7-not-valid-tip {
+     padding-top: 6px;
+     font-size: 14px;
+ }
+ 
+ .webex-contact-form .wpcf7-submit {
+     color: #fff;
+     background-color: #000;
+     border-width: 0;
+     text-align: inherit;
+ }
+ 
+ .webex-contact-form .wpcf7-spinner {
+     display: none;
+ }
+ 
+ .webex-contact-form .wpcf7-form .wpcf7-response-output {
+     margin: 25px 0 0;
+ }
 
-p:last-child {
-    margin-bottom: 0;
-}
-
-
-/**
- * Widget: Icon List
- */
-.elementor-icon-list-text {
-    -webkit-transition: color .25s;
-    transition: color .25s;
-}
-
-
-/**
- * Blog Posts Widget.
- */
-.post_grid {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[1];
-    grid-template-columns: repeat(1, 1fr);
-    gap: 20px;
-}
-@media screen and (min-width: 768px) {
-    .post_grid {
+ @media (min-width: 768px) {
+    .webex-cf-group {
         display: -ms-grid;
         display: grid;
-        -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+        grid-auto-columns: minmax(0, 1fr);
+        grid-auto-flow: column;
         gap: 20px;
     }
 }
-@media screen and (min-width: 1025px) {
-    .post_grid {
-        display: -ms-grid;
-        display: grid;
-        -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-    }
-}
-
-.post_grid--item {
-    position: relative;
-    z-index: 0;
-}
-
-.post_grid--img > img {
-    display: block;
-}
-
-.post_grid--link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
-.post_grid--meta {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.post_grid--heading {
-    margin: 0;
-    -webkit-transition: color .25s;
-    transition: color .25s;
-}
-
-.post_grid--pagination {
-    text-align: center;
-}
-
-
-/** - Nav Menu Widget **/
-@media (max-width: 1024px) {
-    .elementor-widget-navigation-menu {
-        position: static;
-    }
-    
-    .hfe-nav-menu__toggle:not(.hfe-active-menu) + .hfe-dropdown {
-        display: none;
-    }
-
-    .hfe-dropdown {
-        left: 10px !important;
-        right: 10px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-    }
-}
-
-
-/** Basic Gallery: Equal Height **/
-.bg_equalHeight .gallery-icon > a {
-    display: block;
-    position: relative;
-    z-index: 0;
-}
-
-.bg_equalHeight .gallery-icon > a:before {
-    content: "";
-    display: block;
-    padding-bottom: 100%;
-}
-
-.bg_equalHeight .gallery-icon > a > img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-}
-
-.bg_equalHeight .gallery-icon > a:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: transparent;
-    -webkit-transition: background .25s ease-in-out;
-    transition: background .25s ease-in-out;
-    z-index: 1;
-}
-
-.bg_equalHeight .gallery-icon > a:hover:after {
-    background-color: rgba(0, 0, 0, 0.55);
-}
-
-
-/** Contact Form 7 Widget **/
-.webex-contact-form br {
-    display: none;
-}
-
-.webex-contact-form p {
-    margin: 0;
-}
-
-.webex-contact-form label {
-    display: block;
-}
-
-.webex-contact-form .wpcf7-form-control-wrap {
-    display: block;
-    margin-bottom: 20px;
-}
-
-.webex-contact-form .wpcf7-form-control {
-    margin-top: 5px;
-    outline: 0;
-}
-
-.webex-contact-form textarea.wpcf7-form-control {
-    height: 120px;
-}
-
-.webex-contact-form .wpcf7-not-valid-tip {
-    padding-top: 6px;
-    font-size: 14px;
-}
-
-.webex-contact-form .wpcf7-submit {
-    color: #fff;
-    background-color: #000;
-    border-width: 0;
-    text-align: inherit;
-}
-
-.webex-contact-form .wpcf7-spinner {
-    display: none;
-}
-
-.webex-contact-form .wpcf7-form .wpcf7-response-output {
-    margin: 25px 0 0;
-}
+ 

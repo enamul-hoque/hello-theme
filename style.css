@@ -202,6 +202,7 @@ p:last-child {
     color: #fff;
     background-color: #000;
     border-width: 0;
+    text-align: inherit;
 }
 
 .webex-contact-form .wpcf7-spinner {

@@ -406,6 +406,34 @@ class ContactForm extends Widget_Base {
                 ]
             );
 
+            // Width
+            $this->add_responsive_control(
+                'webex_cf_button_width',
+                [
+                    'label'      => __( 'Width', 'hello-elementor-child' ),
+                    'type'       => Controls_Manager::SLIDER,
+                    'size_units' => [ '%', 'px', 'em', 'rem', 'custom' ],
+                    'range'      => [
+                        'px' => [
+                            'min'   => 0,
+                            'max'   => 1000,
+                            'step'  => 1,
+                        ],
+                        '%' => [
+                            'min'   => 0,
+                            'max'   => 100,
+                            'step'  => 1,
+                        ],
+                    ],
+                    'default'   => [
+                        'unit'  => '%',
+                    ],
+                    'selectors' => [
+                        '{{WRAPPER}} .wpcf7-submit' => 'width: {{SIZE}}{{UNIT}};',
+                    ],
+                ]
+            );
+
             // Padding
             $this->add_responsive_control(
                 'webex_button_padding',

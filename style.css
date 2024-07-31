@@ -220,6 +220,7 @@ Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, fe
         grid-auto-columns: minmax(0, 1fr);
         grid-auto-flow: column;
         gap: 20px;
+        width: 100%;
     }
 }
  

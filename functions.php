@@ -23,7 +23,7 @@
  * @return void
  */
 function hello_elementor_child_enqueue_scripts() {
-	$ver = '1.0.010';
+	$ver = '1.0.011';
 
 	// Styles.
 	wp_enqueue_style( 'hello-elementor-child-style', get_stylesheet_directory_uri() . '/style.css', ['hello-elementor-theme-style'], $ver );

@@ -118,6 +118,7 @@ Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, fe
      }
  
      .hfe-dropdown {
+         width: auto !important;
          left: 10px !important;
          right: 10px;
          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);

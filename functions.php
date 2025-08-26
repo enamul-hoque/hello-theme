@@ -17,6 +17,7 @@
  * Shortcode: Page Title
  * Woo: Add To Cart Text Option
  * Elementor Custom Widgets
+ * Google Site Verification Meta Tag (Optional)
  */
 
 /**
@@ -132,3 +133,10 @@ function el_custom_widgets() {
 }
 add_action('elementor/widgets/widgets_registered', 'el_custom_widgets');
 
+/** Google Site Verification Meta Tag (Optional) **/
+/*
+function add_google_site_verification() {
+    echo '<meta name="google-site-verification" content="" />' . "\n";
+}
+add_action('wp_head', 'add_google_site_verification');
+*/

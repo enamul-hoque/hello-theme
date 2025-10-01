@@ -257,3 +257,30 @@ Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, fe
     opacity: 0.75;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
 }
+
+.image-box-button :is(.elementor-image-box-wrapper, .elementor-image-box-content, .elementor-image-box-description) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.image-box-button .elementor-image-box-wrapper {
+    min-height: 100%;
+}
+.image-box-button .elementor-image-box-content {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+.image-box-button .elementor-image-box-description {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}

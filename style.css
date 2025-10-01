@@ -16,7 +16,8 @@ Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, fe
 
     - Nav Menu Widget
     - Basic Gallery: Equal Height
-    - Contact Form 7 Widget.
+    - Contact Form 7 Widget
+    - Utility Class: Image Box Button
 **/
 
 
@@ -224,4 +225,35 @@ Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, fe
         width: 100%;
     }
 }
- 
+
+/** Utility Class: Image Box Button **/
+.image-box-button {
+    position: relative;
+    z-index: 1;
+}
+
+.image-box-button .elementor-image-box-img > a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.image-box-button .elementor-image-box-description:after {
+    content: "Learn More >";
+    display: block;
+    margin-top: 20px;
+    padding: 15px 10px;
+    background-color: var(--e-global-color-primary);
+    border-radius: 8px;
+    -webkit-transition: opacity .25s ease-in-out;
+    transition: opacity .25s ease-in-out;
+}
+
+.image-box-button:hover .elementor-image-box-description:after {
+    opacity: 0.75;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+}

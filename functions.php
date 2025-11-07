@@ -18,6 +18,9 @@
  * Woo: Add To Cart Text Option
  * Elementor Custom Widgets
  * Google Site Verification Meta Tag (Optional)
+ * Custom image sizing and fitting controls to Elementor's Basic Gallery widget
+ * Elementor – Extend Button widget icon (View/Shape/Colors/Border/Radius)
+ * "Icon Margin" to the Icon Box widget (applies to the icon element)
  */
 
 /**
@@ -140,3 +143,18 @@ function add_google_site_verification() {
 }
 add_action('wp_head', 'add_google_site_verification');
 */
+
+
+/** Custom image sizing and fitting controls to Elementor's Basic Gallery widget  **/
+
+include_once( 'inc/basic-gallery-image-sizing.php' );
+
+
+/** Elementor – Extend Button widget icon (View/Shape/Colors/Border/Radius) **/
+
+include_once( 'inc/extend-button-widget-icon.php' );
+
+
+/** "Icon Margin" to the Icon Box widget (applies to the icon element) **/
+
+include_once( 'inc/icon-box-icon-margin.php' );
